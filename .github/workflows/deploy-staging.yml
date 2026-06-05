@@ -1,0 +1,31 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+      - run: pnpm -r run typecheck
+      - run: pnpm -r run lint
+      - run: pnpm -r run build
+
+      - name: Deploy API to Railway
+        run: npx railway up --service api --environment staging
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+      - name: Deploy Frontend to Vercel
+        run: npx vercel --prod --scope confess-staging
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
