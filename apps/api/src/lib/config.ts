@@ -2,7 +2,7 @@ export const config = {
   port: parseInt(process.env.PORT ?? "3001"),
   databaseUrl: process.env.DATABASE_URL ?? "postgresql://confess:confess@localhost:5432/confess",
   redisUrl: process.env.REDIS_URL ?? "redis://localhost:6379",
-  openaiKey: process.env.OPENAI_API_KEY ?? "",
+  huggingfaceKey: process.env.HUGGINGFACE_API_KEY ?? "",
   clerkSecretKey: process.env.CLERK_SECRET_KEY ?? "",
 
   confidence: {
