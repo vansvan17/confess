@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm install && pnpm build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/[[route]].ts": {
+      "memory": 512,
+      "maxDuration": 30
+    }
+  }
+}
