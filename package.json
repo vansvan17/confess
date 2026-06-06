@@ -33,12 +33,5 @@
       "prettier --write"
     ]
   },
-  "packageManager": "pnpm@11.5.2",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "msgpackr-extract",
-      "sharp"
-    ]
-  }
+  "packageManager": "pnpm@11.5.2"
 }
