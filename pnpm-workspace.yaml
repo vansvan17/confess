@@ -2,8 +2,3 @@ packages:
   - "apps/*"
   - "packages/*"
   - "tests/e2e"
-
-onlyBuiltDependencies:
-  - esbuild
-  - msgpackr-extract
-  - sharp
