@@ -4,7 +4,6 @@
     "jsx": "preserve",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "outDir": "./dist",
-    "rootDir": "./src",
     "plugins": [{ "name": "next" }]
   },
   "include": ["src", "next-env.d.ts"]
