@@ -1,6 +1,5 @@
 {
   "framework": "nextjs",
-  "rootDirectory": "apps/web",
   "installCommand": "pnpm install --ignore-scripts",
   "buildCommand": "pnpm build",
   "outputDirectory": ".next"
